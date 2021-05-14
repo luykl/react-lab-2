@@ -5,9 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f1f7;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  text-align: center;
+  font-family: 'Homemade Apple', cursive;
+}
+
+/* title and "New Thought" button: #03a9f4
+form background: #79c5e8 */
+
+
+
+
