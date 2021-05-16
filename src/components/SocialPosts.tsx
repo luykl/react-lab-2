@@ -6,7 +6,7 @@ import './SocialPosts.css';
 
 
 function SocialPosts() {
-  const [ posts, setPosts] = useState<Post[]>([]);
+  const [ posts, setPosts] = useState<Post[]>([{title:"Lorem Ipsum", thought:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel leo odio. Nunc at vehicula urna. "}]);
   const [ form, setForm ] = useState(false);
   
 
@@ -32,7 +32,7 @@ function SocialPosts() {
     <div className="SocialPosts">
         
         <button className="newThought" onClick={() => setForm(true)}>New Thought</button>
-        <section>
+        <section className="postSection">
             {posts.map((post, i) => <PostInList key={i} post={post} onDelete={() => handleDeletePost(i)} />)}
         </section>
         <section className="formSection">

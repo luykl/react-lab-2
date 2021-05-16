@@ -8,6 +8,7 @@ import CloseIcon from '@material-ui/icons/Close';
 interface Props {
     onSubmit: (post: Post) => void;
     
+    
   }
 
 
@@ -34,9 +35,11 @@ function PostForm ({ onSubmit }:Props) {
 
     
 
+    
+
     return (
     <form className="PostForm" onSubmit={handleSubmit}>
-      <CloseIcon />
+      {/* <CloseIcon /> */}
       <p>
         <label>Title <br/>
           <input type="text" value={title}
