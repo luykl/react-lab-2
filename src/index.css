@@ -16,10 +16,20 @@ code {
 h1 {
   text-align: center;
   font-family: 'Homemade Apple', cursive;
+  color: #03a9f4;
 }
 
-/* title and "New Thought" button: #03a9f4
-form background: #79c5e8 */
+button {
+  background-color: #03a9f4;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: .75em;
+  color: white;
+  font-weight: 700;
+}
+
+
+
 
 
 

@@ -7,6 +7,7 @@ import './SocialPosts.css';
 
 function SocialPosts() {
   const [ posts, setPosts] = useState<Post[]>([]);
+  const [ form, setForm ] = useState(false);
   
 
   function handleDeletePost(index: number): void {
@@ -20,17 +21,22 @@ function SocialPosts() {
   function handleAddPost(post: Post): void {
     // immutable add
     setPosts(prevPosts => [ ...prevPosts, post ]);
+    setForm(false);
   }
+
+  
+
+  
 
   return (
     <div className="SocialPosts">
         
-        <button className="newThought">New Thought</button>
+        <button className="newThought" onClick={() => setForm(true)}>New Thought</button>
         <section>
             {posts.map((post, i) => <PostInList key={i} post={post} onDelete={() => handleDeletePost(i)} />)}
         </section>
         <section className="formSection">
-        <PostForm onSubmit={handleAddPost} />
+        {form && <PostForm onSubmit={handleAddPost} />}
         </section>
     </div>
       )

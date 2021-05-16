@@ -3,8 +3,11 @@ import Post from '../model/Post';
 import './PostForm.css'
 import CloseIcon from '@material-ui/icons/Close';
 
+
+
 interface Props {
-    onSubmit: (shape: Post) => void;
+    onSubmit: (post: Post) => void;
+    
   }
 
 
@@ -29,24 +32,26 @@ function PostForm ({ onSubmit }:Props) {
         setThought("");
     }
 
+    
+
     return (
     <form className="PostForm" onSubmit={handleSubmit}>
       <CloseIcon />
       <p>
-        <label>Title
+        <label>Title <br/>
           <input type="text" value={title}
                  onChange={e => setTitle(e.target.value)} />
         </label>
       </p>
       <p>
-        <label>Thought
-          <input type="text" value={thought}
+        <label>Thought <br/>
+          <textarea  className="thoughtInput" value={thought}
                  onChange={e => setThought(e.target.value)} />
         </label>
       </p>
       
       <p>
-        <button type="submit">Submit</button>
+        <button className="submitButton" type="submit">Submit</button>
       </p>
 
       
